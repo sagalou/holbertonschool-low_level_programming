@@ -37,4 +37,4 @@ By the end of this project, I am expected to be able to explain:
 | `11-print_to_98.c` | Function that prints all natural numbers from n to 98. |
 
 ## Author
-* **Julien** - [GitHub Profile](https://github.com/ton_pseudo)
+* **Julien** - [GitHub Profile](https://github.com/sagalou)
