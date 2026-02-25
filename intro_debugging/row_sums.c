@@ -23,7 +23,7 @@ int total_sum(int rows, int cols)
         total += current;
     }
 
-    return total;
+    return current;
 }
 
 /* -- DO NOT Modify the code below this line -- */
