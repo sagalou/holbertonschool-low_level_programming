@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * sum_to_n - Calculates the sum of integers from 1 to n
+ * @n: The upper limit of the sum
+ *
+ * Return: The sum of integers from 1 to n
+ */
 int sum_to_n(int n)
 {
 	int i;
