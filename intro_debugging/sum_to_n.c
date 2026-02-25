@@ -19,6 +19,11 @@ int sum_to_n(int n)
 
 /* -- DO NOT Modify the code below this line -- */
 
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (success)
+ */
 int main(void)
 {
 	printf("%d\n", sum_to_n(10));

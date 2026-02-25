@@ -21,6 +21,11 @@ void print_table(int size)
 
 /* -- DO NOT Modify the code below this line -- */
 
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (success)
+ */
 int main(void)
 {
 	print_table(4);
