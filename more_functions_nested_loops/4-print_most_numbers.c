@@ -6,7 +6,7 @@
 * Description: You can only use _putchar twice in your code.
 * This requires using a loop to iterate through the digits.
 */
-void print_most_numbers(void)
+void print_most_numbers(void);
 {
 	int i;
 
