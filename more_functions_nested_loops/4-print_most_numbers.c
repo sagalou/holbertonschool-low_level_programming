@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 /**
-* print_numbers - Prints the numbers from 0 to 9, followed by a new line.
+* print_most_numbers - Prints the numbers from 0 to 9 except 2 and 4.
 *
-* Description: You can only use _putchar twice in your code.
-* This requires using a loop to iterate through the digits.
+* Description: Prints digits 0-9 excluding 2 and 4, followed by a new line.
+* Uses _putchar function to output each character.
 */
-void print_most_numbers(void);
+void print_most_numbers(void)
 {
 	int i;
 
