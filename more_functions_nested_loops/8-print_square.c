@@ -14,7 +14,7 @@ void print_square(int size)
 {
 	int ligne, espace;
 
-	if (size >= 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 
