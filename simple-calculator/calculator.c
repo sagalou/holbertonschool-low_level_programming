@@ -1,75 +1,83 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 
-int main() 
+/**
+ * add - Sum
+ * @a: First
+ * @b: Second
+ * Return: Sum
+ */
+double add(double a, double b)
 {
-int choice;
-int a, b;
-
-while (1)
-{
-
-    printf(" Simple Calculator \n");
-    printf("1. Add\n");
-    printf("2. Substract\n");
-    printf("3. Multiply\n");
-    printf("4. Divide\n");
-    printf("0. Quit\n");
-    scanf("%d", &choice);
-
-   if (choice == 0)
-    {
-        printf("Bye!\n");
-        return (0);
-    }
-    else if(choice < 0 || choice > 4)  
-    {
-        printf("Invalid choice\n");
-    }
-    else if (choice == 1)
-    {
-        printf("A: ");
-        scanf("%d", &a);
-
-        printf("B: ");
-        scanf("%d", &b);
-
-        printf("Result: %d\n", a + b);
-
-    }
-    else if (choice == 2)
-    {
-        printf("A: ");
-        scanf("%d", &a);
-
-        printf("B: ");
-        scanf("%d", &b);
-
-        printf("Result: %d\n", a - b);
-    }
-
-    else if (choice == 3)
-    {
-        printf("A: ");
-        scanf("%d", &a);
-
-        printf("B: ");
-        scanf("%d", &b);
-
-        printf("Result: %d\n", a * b);
-    }
-    else if (choice == 4)
-    {
-        printf("A: ");
-        scanf("%d", &a);
-
-        printf("B: ");
-        scanf("%d", &b);
-
-        printf("Result: %d\n", a / b);
-    }
-
+	return (a + b);
 }
+
+/**
+ * subtract - Diff
+ * @a: First
+ * @b: Second
+ * Return: Diff
+ */
+double subtract(double a, double b)
+{
+	return (a - b);
+}
+
+/**
+ * multiply - Product
+ * @a: First
+ * @b: Second
+ * Return: Product
+ */
+double multiply(double a, double b)
+{
+	return (a * b);
+}
+
+/**
+ * divide - Quotient
+ * @a: First
+ * @b: Second
+ * Return: Quotient
+ */
+double divide(double a, double b)
+{
+	if (b == 0)
+	{
+		printf("Error: Division by zero\n");
+		return (0);
+	}
+	return (a / b);
+}
+
+/**
+ * main - Entry point
+ * Return: Always 0
+ */
+int main(void)
+{
+	int choice;
+	double a, b, r;
+
+	while (printf("1. Add\n2. Sub\n3. Mul\n4. Div\n0. Quit\nChoice: ") &&
+	       scanf("%d", &choice) == 1 && choice != 0)
+	{
+		if (choice < 1 || choice > 4)
+		{
+			printf("Invalid choice\n");
+			continue;
+		}
+		printf("A and B: ");
+		if (scanf("%lf %lf", &a, &b) != 2)
+			break;
+		if (choice == 1)
+			r = add(a, b);
+		else if (choice == 2)
+			r = subtract(a, b);
+		else if (choice == 3)
+			r = multiply(a, b);
+		else
+			r = divide(a, b);
+		printf("Result: %.2f\n", r);
+	}
+	return (0);
 }

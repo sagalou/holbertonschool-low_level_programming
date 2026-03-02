@@ -1,7 +1,8 @@
 # Holberton School - Low Level Programming
 
 ## Description
-This project is a terminal-based interactive calculator built using the C programming language. It marks the transition from isolated programming concepts to building a complete, functional program that runs in a loop, performs arithmetic operations, and manages user input via scanf.
+This is a simple interactive terminal-based calculator written in C. It performs basic arithmetic operations using user-provided numbers. This project was built to practice modular programming, input handling with `scanf`, and strict adherence to the **Betty** coding style.
+
 
 ## Author
 **Sagalou** - Holberton School Student
@@ -9,3 +10,16 @@ This project is a terminal-based interactive calculator built using the C progra
 ## Projects
 Calculator (calculator.c)
 A menu-driven application that performs basic arithmetic while handling edge cases like division by zero.
+
+## Features
+* **Addition**: Sum of two numbers.
+* **Subtraction**: Difference between two numbers.
+* **Multiplication**: Product of two numbers.
+* **Division**: Quotient of two numbers (with a safety check for division by zero).
+* **Decimal Support**: Uses `double` precision for calculations.
+
+## Compilation
+To compile this program, use the following command with the required strict flags:
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 calculator.c -o calculator
