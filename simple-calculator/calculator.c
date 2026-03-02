@@ -5,7 +5,10 @@
 
 int main() 
 {
-int simpleCalculator;
+int choice;
+
+while (1)
+{
 
     printf(" Simple Calculator \n");
     printf("1. Add\n");
@@ -13,11 +16,17 @@ int simpleCalculator;
     printf("3. Multiply\n");
     printf("4. Divide\n");
     printf("0. Quit\n");
+    scanf("%d", &choice);
 
-    printf("Bye!\n");
-    
-    scanf("%d", &simpleCalculator);
-    
-    printf("\n");
-    return 0;
+   if (choice == 0)
+    {
+        printf("Bye!\n");
+        return (0);
+    }
+    else if(choice < 0 || choice > 4)  
+    {
+        printf("Invalid choice\n");
+    }
 }
+}
+
