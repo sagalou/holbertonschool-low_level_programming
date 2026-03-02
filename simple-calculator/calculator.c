@@ -58,7 +58,7 @@ int main(void)
 	int choice;
 	double a, b, r;
 
-	while (printf("1. Add\n2. Sub\n3. Mul\n4. Div\n0. Quit\nChoice: ") &&
+	while (printf("1. Add\n2. Substract\n3. Multiply\n4. Divide\n0. Quit\nChoice: ") &&
 	       scanf("%d", &choice) == 1 && choice != 0)
 	{
 		if (choice < 1 || choice > 4)
