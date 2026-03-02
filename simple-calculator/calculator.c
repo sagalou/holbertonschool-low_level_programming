@@ -6,6 +6,7 @@
 int main() 
 {
 int choice;
+int a, b;
 
 while (1)
 {
@@ -27,6 +28,16 @@ while (1)
     {
         printf("Invalid choice\n");
     }
-}
-}
+    else if (choice ==1)
+    {
+        printf("A: ");
+        scanf("%d", &a);
 
+        printf("B: ");
+        scanf("%d", &b);
+
+        printf("Result: %d\n", a + b);
+
+    }
+}
+}
