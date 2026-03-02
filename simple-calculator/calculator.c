@@ -28,7 +28,7 @@ while (1)
     {
         printf("Invalid choice\n");
     }
-    else if (choice ==1)
+    else if (choice == 1)
     {
         printf("A: ");
         scanf("%d", &a);
@@ -39,7 +39,7 @@ while (1)
         printf("Result: %d\n", a + b);
 
     }
-    else if (choice ==2)
+    else if (choice == 2)
     {
         printf("A: ");
         scanf("%d", &a);
@@ -49,5 +49,17 @@ while (1)
 
         printf("Result: %d\n", a - b);
     }
+
+    else if (choice == 3)
+    {
+        printf("A: ");
+        scanf("%d", &a);
+
+        printf("B: ");
+        scanf("%d", &b);
+
+        printf("Result: %d\n", a * b);
+    }
+
 }
 }
