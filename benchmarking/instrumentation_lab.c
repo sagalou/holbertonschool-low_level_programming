@@ -8,8 +8,8 @@ static int dataset[DATASET_SIZE];
 
 static unsigned int next_value(unsigned int *state)
 {
-    *state = (*state * 1103515245u) + 12345u;
-    return *state;
+*state = (*state * 1103515245u) + 12345u;
+return (*state);
 }
 
 static void build_dataset(void)
@@ -84,5 +84,5 @@ int main(void)
     printf("PROCESS seconds: %.6f\n"), (double)(end_total - start total) / CLOCKS_PER_SEC);
     printf("REDUCE seconds: %.6f\n"), (double)(end_total - start total) / CLOCKS_PER_SEC);
     
-    return 0;
+    return (0);
 }
