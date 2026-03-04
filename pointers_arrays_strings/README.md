@@ -1,82 +1,221 @@
-## Pointers, Arrays & Strings – 0. 98 Battery 🔋
+## Pointers, Arrays & Strings - Pointers to pointers - Two dimensional arrays, Multi-dimensional arrays
 
+🧠 Project 1: Pointers, Arrays and Strings
 This project is part of the holbertonschool-low_level_programming repository and focuses on understanding pointers in C.
+This project introduces the fundamental concepts of:
 
-📌 Task Description
+Pointers
 
-Write a function that takes a pointer to an integer as a parameter and updates the value it points to to 98.
+Arrays
 
-Prototype
-void reset_to_98(int *n);
+Strings
 
-The function must:
+Memory layout
 
-Receive a pointer to an int
+Variable scope
 
-Modify the value stored at that memory address
+It focuses on understanding how memory works and how data is stored and accessed using pointers and array
 
-Set it to 98
-
-📂 Project Structure
-holbertonschool-low_level_programming/
-└── pointers_arrays_strings/
-    ├── 0-reset_to_98.c
-    ├── main.h
-    └── 0-main.c (for testing)
-🛠 Compilation
-
-To compile the program:
-
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-reset_to_98.c -o 0-98
-▶️ Example
-Test File (0-main.c)
-#include "main.h"
-#include <stdio.h>
-
-/**
- * main - check the code 
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    int n;
-
-    n = 402;
-    printf("n=%d\n", n);
-    reset_to_98(&n);
-    printf("n=%d\n", n);
-    return (0);
-}
-Output
-n=402
-n=98
 
 🧠 How It Works
 
-The function receives a pointer (int *n).
+Functions manipulate data using pointers instead of returning large values.
 
-A pointer stores the memory address of a variable.
+Strings are handled as arrays of characters ending with '\0'.
 
-Using the dereference operator *, we access and modify the value stored at that address.
+Memory addresses are accessed using & (address-of operator).
 
-The function changes the value to 98, directly affecting the original variable.
+Values are accessed using * (dereferencing operator).
 
-Example implementation:
+Example concept:
 
-void reset_to_98(int *n)
-{
-    *n = 98;
-}
+int x = 10;
+int *p = &x;  /* p stores the address of x */
+
 🎯 Learning Objectives
 
-Understand what pointers are
+By the end of this project, I can explain:
 
-Learn how to dereference a pointer
+What pointers are and how to use them
 
-Modify a variable’s value through its memory address
+What arrays are and how to use them
 
-Practice compiling C programs using strict flags
+The difference between pointers and arrays
+
+How strings are stored and manipulated in C
+
+How variable scope works
+
+
+📌 Project 2: More Pointers, Arrays and Strings
+📖 Description
+
+This project deepens pointer manipulation skills and introduces more advanced string and array operations.
+
+It reinforces:
+
+Pointer arithmetic
+
+Array traversal
+
+Manual string manipulation
+
+Recreating standard library behavior
+
+
+🎯 Learning Objectives
+
+After completing this project, I better understand:
+
+Pointer arithmetic
+
+Passing arrays to functions
+
+Advanced string operations
+
+Writing custom implementations of common string functions
+
+
+⚙️ How It Works
+
+Instead of using standard library functions like:
+
+printf
+
+puts
+
+strlen
+
+strcpy
+
+We recreate similar behavior manually using:
+
+Loops
+
+Pointers
+
+Character-by-character manipulation
+
+_putchar for output
+
+This strengthens understanding of what happens behind the scenes.
+
+
+📌 Project 3: Even More Pointers, Arrays and Strings
+📖 Description
+
+This project introduces more advanced memory concepts including:
+
+Pointers to pointers
+
+Multidimensional arrays
+
+Deeper string manipulation
+
+
+🎯 Learning Objectives
+
+By the end of this project, I can explain:
+
+What a pointer to a pointer is (int **ptr)
+
+How 2D arrays are stored in memory
+
+How multidimensional arrays are accessed
+
+Common string manipulation patterns
+
+
+⚙️ How It Works
+Pointer to Pointer Example
+int x = 5;
+int *p = &x;
+int **pp = &p;
+
+p stores the address of x
+
+pp stores the address of p
+
+2D Array Example
+int arr[2][3];
+
+This is stored in contiguous memory, row by row.
+
+
+🛠 Compilation & Requirements
+
+All projects follow strict rules:
+
+Compiled on Ubuntu 20.04 LTS
+
+Compiler: gcc
+
+Flags:
+
+-Wall -Werror -Wextra -pedantic -std=gnu89
+
+No global variables
+
+No more than 5 functions per file
+
+No use of the standard C library (no printf, puts, etc.)
+
+Only _putchar is allowed
+
+Betty coding style required
+
+All prototypes must be in main.h
+
+All files must end with a new line
+
+
+🧩 Key Concepts Covered Across All Projects
+
+Memory addressing
+
+Stack memory basics
+
+Dereferencing
+
+Pointer arithmetic
+
+Array indexing vs pointer notation
+
+String termination ('\0')
+
+Passing by reference
+
+2D array traversal
+
+Pointer-to-pointer relationships
+
+
+🚀 What These Projects Really Teach
+
+These projects are not just about syntax. They teach:
+
+How memory works internally
+
+How C handles data
+
+Why abstraction in higher-level languages exists
+
+How to write safer, more predictable code
+
+How to think like a systems programmer
+
+They build the foundation needed for:
+
+Data structures
+
+Dynamic memory allocation (later projects)
+
+Linked lists
+
+Trees
+
+Advanced memory management
+
 
 👨‍💻 Author
 
