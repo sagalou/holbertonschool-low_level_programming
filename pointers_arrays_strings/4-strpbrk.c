@@ -2,16 +2,15 @@
 #include <stdio.h>
 
 /**
- * _strspn - gets the length of a prefix substring
+ * _strpbrk - searches a string for any of a set of bytes
  * @s: pointer to the string to search
  * @accept: pointer to the string containing accepted characters
  *
  * Return: Always 0.
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	unsigned int count = 0;
 	int j;
 	int found;
 
@@ -26,10 +25,8 @@ unsigned int _strspn(char *s, char *accept)
 			j++;
 		}
 		if (found == 1)
-			count++;
-		else
-			return (count);
+			return (s);
 		s++;
 	}
-	return (count);
+	return (NULL);
 }
