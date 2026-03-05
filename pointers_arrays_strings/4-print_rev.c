@@ -10,12 +10,12 @@ void print_rev(char *s)
 	char *end = s;
 
 	while (*end != '\0')
-    end++;
+		end++;
 
-    while (end > s)
+	while (end > s)
 	{
 		end--;
-        _putchar(*end);
+		_putchar(*end);
 	}
 	_putchar('\n');
 }
