@@ -8,8 +8,8 @@ static int dataset[DATASET_SIZE];
 
 static unsigned int next_value(unsigned int *state)
 {
-*state = (*state * 1103515245u) + 12345u;
-return (*state);
+    *state = (*state * 1103515245u) + 12345u;
+    return *state;
 }
 
 static void build_dataset(void)
