@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -13,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	int len1 = 0, len2 = 0, i = 0;
+	size_t len1 = 0, len2 = 0, i = 0;
 
 	if (s1 == NULL)
 		s1 = "";
