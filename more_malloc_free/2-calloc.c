@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
 * *_calloc - allocates memory for an array
@@ -24,7 +23,7 @@ ptr = malloc(nmemb * size);
 if (ptr == NULL)
 	return (NULL);
 
-bytes = ptr,
+bytes = ptr;
 i = 0;
 while (i < nmemb * size)
 {
