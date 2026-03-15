@@ -12,7 +12,9 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 
+char *bytes;
 void *ptr;
+unsigned int i = 0;
 
 if (nmemb == 0 || size == 0)
 	return (NULL);
@@ -22,8 +24,13 @@ ptr = malloc(nmemb * size);
 if (ptr == NULL)
 	return (NULL);
 
-memset(ptr, 0, nmemb * size);
-
+bytes = ptr,
+i = 0;
+while (i < nmemb * size)
+{
+	bytes[i] = 0;
+	i++;
+}
 return (ptr);
 
 }
