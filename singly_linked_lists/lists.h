@@ -1,4 +1,3 @@
-cat > ~/holbertonschool-low_level_programming/singly_linked_lists/lists.h << 'EOF'
 #ifndef LISTS_H
 #define LISTS_H
 
