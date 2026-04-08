@@ -51,6 +51,62 @@ Reads a text file and prints it to POSIX standard output.
 ```bash
 ./a Requiescat
 ```
+---
+
+### 1. Under the snow
+
+**Prototype:** `int create_file(const char *filename, char *text_content);`
+
+Creates a file and writes text content to it.
+
+- Returns `1` on success, `-1` on failure
+- File permissions: `rw-------` (`0600`)
+- If the file already exists, truncate it but do not change permissions
+- If `filename` is `NULL` return `-1`
+- If `text_content` is `NULL`, create an empty file
+
+**Usage:**
+```bash
+./b hello world
+```
+
+---
+
+### 2. Speak gently, she can hear
+
+**Prototype:** `int append_text_to_file(const char *filename, char *text_content);`
+
+Appends text at the end of a file.
+
+- Returns `1` on success, `-1` on failure
+- Does not create the file if it does not exist
+- If `filename` is `NULL` return `-1`
+- If `text_content` is `NULL`, return `1` if file exists, `-1` otherwise
+
+**Usage:**
+```bash
+./c hello " World!"
+```
+
+---
+
+### 3. cp
+
+A program that copies the content of a file to another file.
+
+- Usage: `cp file_from file_to`
+- Exit code `97` if wrong number of arguments
+- Exit code `98` if `file_from` cannot be read
+- Exit code `99` if `file_to` cannot be written
+- Exit code `100` if a file descriptor cannot be closed
+- File permissions of created file: `rw-rw-r--` (`0664`)
+- Reads 1024 bytes at a time using a buffer
+
+**Usage:**
+```bash
+./cp incitatous Incitatous
+```
+
 
 ## How It Works
 
